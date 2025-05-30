@@ -1,0 +1,41 @@
+body {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  background: #faf3e3;
+  color: #222;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: #e74c3c;
+  text-shadow: 2px 2px #ffe066;
+}
+label, select, input {
+  margin: 0.5rem;
+}
+#preview-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #fffbe6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #ccc;
+}
+footer {
+  margin-top: 3rem;
+  color: #888;
+}
+button {
+  font-size: 1.1rem;
+  background: #e67e22;
+  border: none;
+  color: white;
+  padding: 0.7em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #d35400;
+}
