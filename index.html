@@ -1,51 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Parody Video Remixer Generator</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Parody Video Remixer & Exporter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>🌀 YTP/YTPMV/Nostalgia Video Remix Generator 🌀</h1>
-  <form id="video-form">
-    <label>
-      Upload Video:
-      <input type="file" accept="video/*" id="video-upload">
-    </label>
-    <span>or</span>
-    <label>
-      YouTube URL:
-      <input type="url" id="youtube-url" placeholder="https://www.youtube.com/watch?v=...">
-    </label>
-    <br>
-    <label>
-      Remix Style:
-      <select id="remix-style">
-        <option value="ytp">YTP Parody</option>
-        <option value="ytpmv">YTPMV (Music Video)</option>
-        <option value="nostalgia">Nostalgia Remix</option>
-        <option value="watermark">Watermark/Text Only</option>
-      </select>
-    </label>
-    <br>
-    <label>
-      Watermark/Text:
-      <input type="text" id="watermark-text" placeholder="Your watermark or meme text">
-    </label>
-    <br>
-    <button type="button" id="generate-btn">Generate Remix</button>
-  </form>
-  <div id="preview-section">
-    <h2>Preview</h2>
-    <video id="video-preview" controls width="480"></video>
-    <canvas id="watermark-canvas" width="480" height="270" style="display:none"></canvas>
-    <br>
-    <a id="download-link" download="remix.mp4" style="display:none">Download Remixed Video</a>
-  </div>
+  <h1>🎬 Parody Video Remixer & Exporter</h1>
+  <section id="controls">
+    <input type="file" id="videoInput" accept="video/*" />
+    <input type="text" id="watermarkText" placeholder="Watermark/Text" />
+    <button id="remixBtn">Remix & Preview</button>
+    <button id="autofixBtn">Autofix</button>
+    <button id="exportBtn">Export with ffmpeg</button>
+    <button id="updateBtn">Update Code</button>
+  </section>
+  <section id="previewSection">
+    <video id="videoPreview" controls width="480"></video>
+    <canvas id="canvasPreview" width="480" height="270" style="display:none"></canvas>
+    <a id="downloadLink" style="display:none" download="exported.mp4">Download Exported Video</a>
+    <p id="status"></p>
+  </section>
   <footer>
-    <p>Parody Generator | <a href="https://github.com/yourusername/yourrepo">View Source</a></p>
+    <small>© 2025 Parody Remixer | <a href="https://github.com/Lulu2012-mesty/parody-remixer">Source</a></small>
   </footer>
+  <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.4/dist/ffmpeg.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
